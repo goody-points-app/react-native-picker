@@ -79,6 +79,11 @@ numberOfRowsInComponent:(__unused NSInteger)component
           forComponent:(NSInteger)component
            reusingView:(UILabel *)label
 {
+  for(UIView *single in pickerView.subviews)
+    {
+        single.backgroundColor = [UIColor clearColor];   
+    }
+
   if (!label) {
     label = [[UILabel alloc] initWithFrame:(CGRect){
       CGPointZero,
